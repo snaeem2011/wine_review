@@ -1218,3 +1218,40 @@ Processing by WinesController#show as HTML
   [1m[36mWine Load (0.2ms)[0m  [1mSELECT "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", "2"]]
   Rendered wines/show.html.erb within layouts/application (0.2ms)
 Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.4ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-04-22 22:52:13 -0400
+
+
+Started GET "/wine/1" for 127.0.0.1 at 2014-04-22 22:52:15 -0400
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWine Load (0.3ms)[0m  [1mSELECT "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered wines/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2014-04-22 22:52:16 -0400
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.2ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.2ms)
