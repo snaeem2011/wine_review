@@ -1,10 +1,15 @@
 <article class="wine">
 
 <header>
-	<h2><%= @wine.name%> </h2>
+	<h2><%= @wines.name%> </h2>
 </header>
-<p><label>Wine year:</label> <%= @wine.year %></p>
-<p><label>Wine winery:</label> <%= @wine.winery %></p>
-<p><label>Wine country:</label> <%= @wine.country %></p>
-<p><label>Wine varietal:</label> <%= @wine.varietal %></p>
+<p><label>Wine year:</label> <%= @wines.year %></p>
+<p><label>Wine winery:</label> <%= @wines.winery %></p>
+<p><label>Wine country:</label> <%= @wines.country %></p>
+<p><label>Wine varietal:</label> <%= @wines.varietal %></p>
 <%= link_to 'All Wines', wines_path %>
+<%= link_to 'Edit', edit_wine_path(@wines) %>
+<%= button_to 'Delete', @wines,
+	method: :delete,
+	data: {confirm: 'Are you sure?'} %>
+
