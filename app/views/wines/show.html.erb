@@ -1,3 +1,5 @@
+<% content_for :name, @wines.name %>
+
 <article class="wine">
 
 <header>
@@ -7,7 +9,7 @@
 <p><label>Wine winery:</label> <%= @wines.winery %></p>
 <p><label>Wine country:</label> <%= @wines.country %></p>
 <p><label>Wine varietal:</label> <%= @wines.varietal %></p>
-<%= link_to 'All Wines', wines_path %>
+
 <%= link_to 'Edit', edit_wine_path(@wines) %>
 <%= button_to 'Delete', @wines,
 	method: :delete,

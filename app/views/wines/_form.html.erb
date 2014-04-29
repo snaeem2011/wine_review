@@ -1,10 +1,11 @@
 <h1> Create a New Wine </h1>
 	<%= form_for(@wines) do |f| %>
+	<%= render 'shared/validation_errors', object: @wines %>
 	<%= f.label :name %> <%= f.text_field :name, autofocus: true %> <br/>
 	<%= f.label :year %> <%= f.text_field :year, autofocus: true %> <br/>
 	<%= f.label :winery %> <%= f.text_field :winery, autofocus: true %> <br/>
 	<%= f.label :country %> <%= f.text_field :country, autofocus: true %> <br/>
-	<%= f.label :varietal %> <%= f.text_field :varietal, autofocus: true %> <br/>	
+	<%= f.label :varietal %> <%= f.select :varietal, :collection => [['White Wine', 1], ['Red Wine', 2], ['Merlot', 3], ['Chardanny',4]]  %> <br/>	
 	<p> <%= f.submit %></p>
 	<%= link_to 'Cancel', wines_path %>
 <% end %>
