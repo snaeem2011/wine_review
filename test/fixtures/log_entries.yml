@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rating: 1
+  location: MyString
+  comments: MyString
+  tested_on: 2014-04-28 22:54:01
+
+two:
+  name: MyString
+  rating: 1
+  location: MyString
+  comments: MyString
+  tested_on: 2014-04-28 22:54:01

@@ -11,7 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140416022434) do
+ActiveRecord::Schema.define(version: 20140429033456) do
+
+  create_table "create_log_entries", force: true do |t|
+    t.string   "name"
+    t.integer  "rating"
+    t.string   "location"
+    t.string   "comments"
+    t.datetime "tested_on"
+    t.integer  "wines_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "wines", force: true do |t|
     t.string   "name"

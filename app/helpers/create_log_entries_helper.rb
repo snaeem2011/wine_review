@@ -1,0 +1,2 @@
+module CreateLogEntriesHelper
+end

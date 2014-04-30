@@ -1,0 +1,17 @@
+<%= form_for([@Wines, @review]) do |f| %>
+	<%= render 'shared/validation_errors', object: @review %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name, autofocus: true, placeholder: 'Name' %> <br/>
+	<%= f.label :ratings%>
+	<% Review::RATINGS.each do |rating| %>
+		<%= f.radio_button :ratings, rating %> <%= rating %>
+	<% end %>
+	<%= f.label :comments %> <br/>
+	<%= f.text_area :comments %><br/>
+	<p>
+		<%= f.submit %>
+		<%= link_to 'Cancel', wine_reviews_path(@Wines), id: 'cancel_review' %>
+	</p>
+<% end %>
+

@@ -1,4 +1,7 @@
 WineReview::Application.routes.draw do
+  resources :create_log_entries
+  
+
 #get "/wines" => "wines#index", as: 'wines'
 #get "/wine/:id"=> "wines#show", as: 'wine'  
 #get "/wines/new" => "wines#new", as: 'new_wine'
@@ -8,7 +11,8 @@ WineReview::Application.routes.draw do
 #patch "/wines/:id" => "wines#update"
 #delete "/wines/:id" => "wines#destroy"
 #resources :wines
-resources :wines do 
+resources :wines do
+  resources :create_log_entries
   get 'page/:page', :action => :index, :on => :collection
 end
 root 'wines#index'

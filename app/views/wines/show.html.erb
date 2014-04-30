@@ -9,7 +9,10 @@
 <p><label>Wine winery:</label> <%= @wines.winery %></p>
 <p><label>Wine country:</label> <%= @wines.country %></p>
 <p><label>Wine varietal:</label> <%= @wines.varietal %></p>
-
+<p>
+	read all
+	<%= link_to pluralize(@Wines.create_log_entries.size, 'create_log_entries'), wine_create_log_entries_path(@Wines) %>
+</p>
 <%= link_to 'Edit', edit_wine_path(@wines) %>
 <%= button_to 'Delete', @wines,
 	method: :delete,

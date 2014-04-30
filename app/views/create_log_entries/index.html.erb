@@ -1,0 +1,15 @@
+<header>Review for <%= link_to(@Wines.name, @Wines) %> </header>
+<ol id="reviews">
+	<% @LogEntries.each do |review| %>
+		<li>
+
+		<span class="review"><%= pluralize(review.rating, 'rating') %> </span>
+		<span class="user"><%= pluralize(review.name, 'name') %> </span>
+		<span class="date"><%= time_ago_in_words(review.tested_on) %> ago </span>
+		<p>
+			&quot; <%= review.comments %>&quot;
+		</p>
+		</li>
+	<% end %>
+</ol>
+<%= link_to 'Write a Review', new_wine_LogEntries_path(@Wines) %>
